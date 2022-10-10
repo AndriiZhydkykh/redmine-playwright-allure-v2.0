@@ -1,25 +1,38 @@
 # Typescript auto test (playwright and allure) for site www.redmine.org 
 
 ## Installation: 
-1. Install node js 
-2. install java 8
-3. install visual studio code
+- Install node js v18.9.0 or higher
+- Install java 8
+- Install visual studio code
 
 ### In the terminal run this code:
-npm install
+```
+npm i
+```
+```
+npx playwright install
+```
 
-## Tests
+## Tests:
 ### Run this command in a terminal in visual studio code to run the auto tests and get a report in allure:
 
-#### For run tests:
+#### To run tests:
+```
 npm run test
+```
 
-#### For generate the allure report:
+#### To generate the allure report:
+```
 npm run reportGenerate 
+```
 
-#### For open the allure repor
+#### To open the allure report
+```
 npm run reportOpen
+```
+---
+#### To run auto test again press ctrl+c in windows or command+c on mac machine, type 'y' in terminal and press enter 
 
-##### For run auto test again press ctrl+c in windows or command+c on mac machine, type 'y' in terminal and press enter 
-
+#### Report view
+<img width="418" alt="Allure report" src="https://live.staticflickr.com/65535/52418281533_b8c6140b70.jpg">
 

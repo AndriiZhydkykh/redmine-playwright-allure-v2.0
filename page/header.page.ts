@@ -6,6 +6,7 @@ const searchInput = ('[id="q"]');
 const downloadLink = ('#header [class="download"]');
 const roadMapLink = ('#header [class="roadmap"]');
 const issuesLink = ('#header [class="issues"]')
+const wikiLink = ('#header [class="wiki selected"]');
 
 export class HeaderPage extends ParentPage {
   constructor(page: Page) {
@@ -29,6 +30,10 @@ export class HeaderPage extends ParentPage {
   }
   async clickIssuesLink() {
     await super.click(issuesLink)
-    
   }
+
+  getWikiLink(){
+    return super.getElement(wikiLink)
+  }
+
 }

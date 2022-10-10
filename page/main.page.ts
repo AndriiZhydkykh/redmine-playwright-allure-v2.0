@@ -8,5 +8,6 @@ export class MainPage extends ParentPage{
   }
 
   async open() {
-    await this.page.goto('https://www.redmine.org/'); }
+    await this.page.goto('/'); }
 } 
+

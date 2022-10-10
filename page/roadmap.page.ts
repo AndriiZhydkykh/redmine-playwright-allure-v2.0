@@ -5,6 +5,7 @@ const defectCheckbox=('[name*="tracker"] >> nth=0');
 const featureCheckbox=('input[value="2"]');
 const subProjectCheckbox=('#with_subprojects[type="checkbox"]');
 const applyButton=('[class="button-small"]');
+const firstPathResultInList=('(//*[@class="subject"]/a[contains(text(), "Patch")])[1]');
 
 export class RoadmapPage extends ParentPage {
   constructor(page: Page) {
@@ -22,8 +23,8 @@ export class RoadmapPage extends ParentPage {
   }
   async clickApplyButton(){
     await super.click(applyButton);
-    
   }
-  
-  
+  async getFirstPathResultInList() {
+    return super.getElement(firstPathResultInList);
+   }
 }

@@ -4,15 +4,14 @@ import { HeaderPage} from '../page/header.page';
 import { RegistrationPage} from '../page/registration.page';
 import { randomEmail, randomName } from '../helper/script';
 
-const wikiLink = ('#header [class="wiki selected"]');
-const flashNoticeConfirmEmail = ('#flash_notice');
-
 test.describe('Registration page testing', () => {
   test.beforeEach(async ({ page }) => {
     const mainPage = new MainPage(page);
     await mainPage.open();
     await expect(page).toHaveURL('https://www.redmine.org/');
-    await expect(page.locator(wikiLink)).toBeVisible();
+
+    const headerPage=new HeaderPage(page)
+    await expect(await headerPage.getWikiLink()).toBeVisible();
   });
 
 test('ID 1 - Registering a new user with a required field', async ({ page }) => {
@@ -29,7 +28,7 @@ test('ID 1 - Registering a new user with a required field', async ({ page }) => 
   await registrationPage.setEmailInput(randomEmail);
   await registrationPage.clickApplyButton();
   await expect(page).toHaveURL(/.*login/);
-  await expect(page.locator(flashNoticeConfirmEmail)).toBeVisible();
+  await expect(await registrationPage.getFlashNoticeConfirmEmail()).toBeVisible();
 });
 test.afterEach(async ({ page }, testInfo) => {
   await testInfo.attach("Flash notice", {

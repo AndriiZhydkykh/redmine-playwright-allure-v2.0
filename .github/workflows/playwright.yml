@@ -24,10 +24,7 @@ jobs:
     
     - name: Run Playwright tests
       run: npm run test
-    
-    - name: Install allure
-      run: npm install -g allure-commandline --save-dev
-    
+
     - name: Reports Generate
       run: npm run reportGenerate   
       

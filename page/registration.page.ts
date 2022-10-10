@@ -8,6 +8,7 @@ const firstNameInput = ('#user_firstname');
 const lastNameInput = ('#user_lastname');
 const emailInput = ('#user_mail');
 const applyButton = ('[type="submit"]');
+const flashNoticeConfirmEmail = ('#flash_notice');
 
 export class RegistrationPage extends ParentPage {
   constructor(page: Page) {
@@ -34,6 +35,9 @@ export class RegistrationPage extends ParentPage {
   }
   async clickApplyButton() {
     await super.click(applyButton);
+  }
+  async getFlashNoticeConfirmEmail() {
+    return super.getElement(flashNoticeConfirmEmail)
   }
 
 }
