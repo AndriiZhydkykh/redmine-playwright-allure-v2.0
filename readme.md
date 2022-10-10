@@ -33,6 +33,6 @@ npm run reportOpen
 ---
 #### To run auto test again press ctrl+c in windows or command+c on mac machine, type 'y' in terminal and press enter 
 
-#### Report view
+### Report view
 <img width="418" alt="Allure report" src="https://live.staticflickr.com/65535/52418281533_b8c6140b70.jpg">
 
