@@ -21,6 +21,8 @@ jobs:
    
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: fix certificates
+      run: sudo apt install --reinstall ca-certificates
     
     - name: Run Playwright tests
       run: npm run test
