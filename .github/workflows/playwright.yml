@@ -20,8 +20,8 @@ jobs:
       run: npm i
    
     - name: Install Playwright Browsers
-      run: npm init playwright@latest
-      
+      run: npx playwright install-deps
+
     - name: Run Playwright tests
       run: npm run test
 
