@@ -20,10 +20,8 @@ jobs:
       run: npm i
    
     - name: Install Playwright Browsers
-      run: npx playwright install
-    - name: Install Playwright deps
-      run: sudo npx playwright install-deps
-    
+      run: npm init playwright@latest
+      
     - name: Run Playwright tests
       run: npm run test
 
