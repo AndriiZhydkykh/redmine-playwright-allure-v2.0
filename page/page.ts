@@ -10,22 +10,22 @@ export class ParentPage{
     return this.page.locator(element);
 }
   async click(element:string) {
-    await this.page.locator(element).click();
+    await (await this.getElement(element)).click();
 
   }
   async fillInputAndEnter(element:any,value:any) {
-    await this.page.locator(element).fill(value);
+    await (await this.getElement(element)).fill(value);
     await this.page.keyboard.press('Enter');
   }
   async type(element:any,value:any) {
-    await this.page.locator(element).type(value);
+    await (await this.getElement(element)).type(value);
 
   }
   async select(element:any,value:any) {
-    await this.page.locator(element).selectOption(value);
+    await (await this.getElement(element)).selectOption(value);
   }
   async check(element:any) {
-    await this.page.locator(element).check();
+    await (await this.getElement(element)).check();
   }
 
 }
