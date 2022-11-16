@@ -25,7 +25,7 @@ jobs:
     - name: Run Playwright tests
       run: npm run test
 
-    - name: Reports Generate
+    - name: The Allure Reports Generate
       run: npm run reportGenerate   
       
     - uses: actions/upload-artifact@master
